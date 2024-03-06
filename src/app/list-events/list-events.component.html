@@ -1,0 +1,14 @@
+<h1 class="title">List of Events</h1>
+<div class="search-container">
+    <input type="text" class="search" placeholder="Search"/>
+</div>
+<div class="events-card-container">
+    <div class="event-card" *ngFor="let event of events">
+        <div class="event-title">
+            <h2>{{ event.Title }}</h2>  
+        </div>
+        <div class="event-details">
+            <p>{{ event.Date }}</p>
+            <p>{{ event.Location }}</p>
+        </div>
+    </div>
