@@ -1,0 +1,15 @@
+<h1 class="title">Add an event</h1>
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()" class="application-form">
+      <label for="title">Title</label>
+        <input matInput type="text" placeholder="title" id="title" name="title">
+      <label for="description">Description</label>
+        <input matInput type="textarea" placeholder="description" id="description" name="description">
+      <label for="date">Date</label>
+        <input matInput type="date" placeholder="date" id="date" name="date">
+      <label for="hour">Hour</label>
+        <input matInput type="time" placeholder="hour" id="hour" name="hour">
+      <label for="location">Location</label>
+        <input matInput type="text" placeholder="location" id="location" name="location">
+    </form>
+</div>
