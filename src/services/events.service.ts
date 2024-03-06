@@ -19,4 +19,8 @@ export class EventsService {
   public addEvent(event: any) {
     return this._httpclient.post<any[]>(`${this.apiUrl}/event`, event).pipe();
   }
+
+  public deleteEvent(id: string) {
+    return this._httpclient.delete<any[]>(`${this.apiUrl}/event/${id}`).pipe();
+  }
 }

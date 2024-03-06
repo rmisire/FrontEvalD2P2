@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class ListEventsComponent {
 
   events: any[] = [];
+  isModalOpen: boolean = false;
+  selectedEventId: string = '';
 
   constructor(
     private _eventsService: EventsService,
@@ -23,5 +25,10 @@ export class ListEventsComponent {
 
   navigateToAddEvent() {
     this.router.navigate(['/add-event']);
+  }
+
+  openConfirmModal(idEvent: string) {
+    this.isModalOpen = true;
+    this.selectedEventId = idEvent;
   }
 }

@@ -2,6 +2,7 @@
 <div class="search-container">
     <input type="text" class="search" placeholder="Search"/>
 </div>
+<button class="add_event_btn" (click)="navigateToAddEvent()">Add Event</button>
 <div class="events-card-container">
     <div class="event-card" *ngFor="let event of events">
         <div class="event-title">
@@ -11,4 +12,18 @@
             <p>{{ event.Date }}</p>
             <p>{{ event.Location }}</p>
         </div>
+        <button class="delete-button" (click)="openConfirmModal(event.idEvent); $event.stopPropagation();">Delete</button>
     </div>
+</div>
+
+<!-- Delete modal -->
+<div class="modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+      <h2>Confirm deletion</h2>
+      <p>Are you sure you want to delete this event ?</p>
+      <div class="modal-actions">
+        <button class="btn-cancel">Cancel</button>
+        <button class="btn-confirm">Confirm</button>
+      </div>
+    </div>
+</div>
